@@ -13,6 +13,7 @@ You'll edit this file in Tasks 2 and 3.
 """
 
 
+
 class NEODatabase:
     """A database of near-Earth objects and their close approaches.
 
@@ -21,6 +22,7 @@ class NEODatabase:
     help fetch NEOs by primary designation or by name and to help speed up
     querying for close approaches that match criteria.
     """
+    
     def __init__(self, neos, approaches):
         """Create a new `NEODatabase`.
 
@@ -42,9 +44,6 @@ class NEODatabase:
         self._neos = neos
         self._approaches = approaches
 
-        # TODO: What additional auxiliary data structures will be useful?
-
-        # TODO: Link together the NEOs and their close approaches.
         # Link together the NEOs and their close approaches.
         self._link_neos_and_approaches()
 
