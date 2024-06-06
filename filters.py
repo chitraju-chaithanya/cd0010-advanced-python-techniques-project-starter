@@ -16,6 +16,7 @@ iterator.
 
 You'll edit this file in Tasks 3a and 3c.
 """
+from itertools import islice
 import operator
 
 
@@ -193,12 +194,6 @@ def limit(iterator, n=None):
     """
     #Produce at most `n` values from the given iterator.
     if n is None or n == 0:
-        # If n is None or 0, yield all values from the iterator.
-        for value in iterator:
-            yield value
+        yield from iterator
     else:
-        # Otherwise, yield only the first n values.
-        for i, value in enumerate(iterator):
-            if i >= n:
-                break
-            yield value
+        yield from islice(iterator, n)
